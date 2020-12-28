@@ -21,5 +21,10 @@ BMI计算；
 
 解方程
 
+![](https://github.com/luolaihua/CalculatorT3000/blob/main/1.jpg)
+![](https://github.com/luolaihua/CalculatorT3000/blob/main/2.jpg)
+![](https://github.com/luolaihua/CalculatorT3000/blob/main/3.jpg)
+![](https://github.com/luolaihua/CalculatorT3000/blob/main/4.jpg)
+
 小程序码：
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/gh_d97374b7d788_258.jpg)
