@@ -1,0 +1,103 @@
+/* miniprogram/pages/iqGame/iqGame.wxss */
+.count,
+.time-box,
+.time,
+.question-box,
+.ans,
+.result,
+.restart,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infoIcon{
+  height: 5vh;
+  width: 5vh;
+  position: fixed;
+  z-index: 2;
+  top: 1vh;
+  right: 10rpx;
+  opacity: 1;
+}
+
+
+.count {
+  height: 6vh;
+  font-size: 40rpx;
+  border-style: solid;
+}
+.nandu {
+  font-size: larger;
+  height: 5vh;
+  width: 5vh;
+  position: fixed;
+  z-index: 2;
+  top: 1vh;
+  left: 10rpx;
+  opacity: 1;
+}
+
+.time-box {
+  margin-top: 3vh;
+}
+
+.time {
+  height: 8vh;
+  font-size: 60rpx;
+}
+
+.question-box {
+  margin-top: 3vh;
+  height: 12vh;
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+.num {
+  font-size: 100rpx;
+}
+.operator {
+  font-size: 100rpx;
+  margin: 0 40rpx;
+}
+
+.answer-box {
+  margin-top: 6vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ans {
+  font-size: 80rpx;
+  border-style: solid;
+  margin: 0 40rpx;
+  width: 150rpx;
+  height: 12vh;
+}
+.result{
+  margin-top: 2vh;
+  font-size: 80rpx;
+  height: 12vh;
+}
+.restart-next{
+
+  margin-top: 2vh;
+  display: block;
+  border-top-style: solid;
+  border-bottom-style: solid;
+
+
+}
+.restart{
+  height: 10vh;
+  float: left;
+  font-size: 40 rpx;
+  padding-left: 20rpx;
+}
+.next{
+  height: 10vh;
+  font-size: 60rpx;
+  float: right;
+  padding-right: 20rpx;
+}

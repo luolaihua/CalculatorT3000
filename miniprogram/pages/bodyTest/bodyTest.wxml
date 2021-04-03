@@ -1,0 +1,95 @@
+<canvas canvas-id="gradeCanvas" class="canvas" style="height:200px;width: {{canvasWidth}};" bindtap="dataAnalyze"></canvas>
+<canvas canvas-id="BMICanvas" class="BMIcanvas" style="height:200px;width: {{canvasWidth}};" bindtap="touchHandler"></canvas>
+
+<view class="dataAnalyze" wx:if='{{isAnalyze}}'>
+    <canvas style="height:400px;width:100%" canvas-id="radarCanvas" class="canvas" bindtap="dataAnalyze"></canvas>
+</view>
+
+<view class="container">
+	<view class="input-container">
+		<view class="item no-border" bindtap="bindSexChange">
+			<text class="label">性别</text>
+			<text class="unit" space="emsp">{{sex}} ></text>
+		</view>
+		<view class="item no-border">
+			<text class="label">年级</text>
+			<picker value="{{gradeIndex}}" range="{{grade}}" bindchange="bindGradeChange" class="type_select">
+				<view class="picker">
+					{{grade[gradeIndex]}}
+					<text>></text>
+				</view>
+			</picker>
+		</view>
+		<view class="item">
+			<text class="label">身高</text>
+			<input type="digit" bindblur="heightOnBindBlur" maxlength="6" value="{{inputValue}}" />
+			<text class="unit">cm</text>
+		</view>
+		<view class="item">
+			<text class="label">体重</text>
+			<input type="digit" bindblur="weightOnBindBlur" maxlength="6" class="" value="{{inputValue}}" />
+			<text class="unit">kg</text>
+		</view>
+		<view class="item">
+			<text class="label">肺活量</text>
+			<input type="digit" bindblur="capacityOnBindBlur" maxlength="6" value="{{inputValue}}" />
+			<text class="unit">ml</text>
+		</view>
+		<view class="item">
+			<text class="label">坐体前屈</text>
+			<input type="digit" bindblur="sit_and_reachOnBindBlur" maxlength="6" class="" value="{{inputValue}}" />
+			<text class="unit">cm</text>
+		</view>
+		<view class="item">
+			<text class="label">立定跳远</text>
+			<input type="digit" bindblur="jumpOnBindBlur" maxlength="6" value="{{inputValue}}" />
+			<text class="unit">m</text>
+		</view>
+		<view class="item" wx:if="{{sexIndex==0}}">
+			<text class="label">引体向上</text>
+			<input type="digit" bindinput="otherOnBindBlur" maxlength="6" class="" value="{{inputValue}}" />
+			<text class="unit">个</text>
+		</view>
+		<view class="item" wx:if="{{sexIndex==1}}">
+			<text class="label">仰卧起坐</text>
+			<input type="digit" bindblur="otherOnBindBlur" maxlength="6" class="" value="{{inputValue}}" />
+			<text class="unit">个</text>
+		</view>
+		<view class="item">
+			<text class="label">50m</text>
+			<input type="digit" bindblur="race_50OnBindBlur" maxlength="6" value="{{inputValue}}" />
+			<text class="unit">s</text>
+		</view>
+		<view class="item no-border" wx:if="{{sexIndex==0}}">
+			<text class="label">1000m</text>
+			<picker mode="time" value="{{time}}" start="0:00" end="6:00" bindchange="bindTimeChange" class="type_select">
+				<view class="picker">
+					{{time}}
+					<text>></text>
+				</view>
+			</picker>
+		</view>
+		<view class="item no-border" wx:if="{{sexIndex==1}}">
+			<text class="label">800m</text>
+			<picker mode="time" value="{{time}}" start="0:00" end="6:00" bindchange="bindTimeChange" class="type_select">
+				<view class="picker">
+					{{time}}
+					<text>></text>
+				</view>
+			</picker>
+		</view>
+		<button style="width:90vw" class="calcu_btn" bindtap="calGrade">开始计算</button>
+				<view class="weui-form__extra-area ">
+			<view class="weui-footer">
+				<view class="weui-footer__text">两个圆可以点击</view>
+				<text bindlongpress="copyLink" class="weui-footer__text" selectable="true">项目源自https://github.com/Mayandev/execal</text>
+			</view>
+		</view>
+	</view>
+
+
+
+
+
+
+</view>

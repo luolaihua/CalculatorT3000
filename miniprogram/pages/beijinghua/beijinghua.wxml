@@ -1,0 +1,41 @@
+<!--miniprogram/pages/beijinghua/beijinghua.wxml-->
+<view class="page">
+	<view class="weui-form">
+		<view class="weui-form__text-area " bindtouchend="touchEnd" bindtouchmove="touchMove" bindtouchstart="touchStart">
+			<view class="weui-form__title" bindtap="switchLang" >{{language[index]}}</view>
+		</view>
+		<view class="weui-form__control-area ">
+			<view class="weui-cells__group weui-cells__group_form ">
+				<view class="weui-cells__title">请输入普通话</view>
+				<view class="weui-cells weui-cells_form">
+					<view class="weui-cell">
+						<view class="weui-cell__bd">
+							<input class="weui-input" value="{{input}}" maxlength='-1' placeholder="收起键盘即可转换" bindconfirm="confirm" bindblur='confirm' />
+						</view>
+					</view>
+				</view>
+			</view>
+			<scroll-view scroll-y='true' style="height:300rpx">
+				<view class="content" >
+					<text selectable='true'>
+					{{content}}
+					</text>
+				</view>
+			</scroll-view>
+
+		</view>
+
+		<view class="weui-form__opr-area ">
+			<button type="primary" bindtap="clear">清除</button>
+		</view>
+		<view class="adContainer">
+			<ad unit-id="adunit-2f3451bf3fc2cca4" ></ad>
+		</view>
+		<view class="weui-form__extra-area ">
+			<view class="weui-footer">
+				<view class="weui-footer__text">点击或滑动上方语言标题切换语言</view>
+				<view class="weui-footer__text">Copyright © 2019-2020 仅供娱乐</view>
+			</view>
+		</view>
+	</view>
+</view>

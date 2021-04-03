@@ -1,0 +1,11 @@
+<!--miniprogram/pages/qrCode/qrCode.wxml-->
+<view class="container page">
+<view class="title">二维码生成</view>
+<view class="input-box">
+  <input placeholder="请输入文字" bindinput="inputText"></input>
+</view>
+<button type="primary" bindtap="makeQrCode">生成</button>
+    <view class="qrcode" bindlongtap="save">
+      <canvas canvas-id="qrcode" />
+    </view>
+</view>

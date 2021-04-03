@@ -1,0 +1,10 @@
+<!--miniprogram/pages/scientificData/scientificData.wxml-->
+<scroll-view >
+
+	<block wx:for="{{array}}" wx:key='*this'>
+		<mp-slideview buttons="{{slideButtons}}" id='{{index}}' bindbuttontap="slideButtonTap">
+			<view class="data" id='{{index}}' bindtap="test" style="color:{{index%2==0?'black':'darkcyan'}}"> {{item}}</view>
+		</mp-slideview>
+	</block>
+</scroll-view>
+<button wx:if="{{message=='history'}}" type="primary"  style="width:90vw" class="clearBtn" bindtap="clear">清除记录</button>

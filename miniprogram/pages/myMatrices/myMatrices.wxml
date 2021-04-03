@@ -1,0 +1,242 @@
+<!--miniprogram/pages/myMatrices/myMatrices.wxml-->
+<view class="page">
+
+	<swiper indicator-dots indicator-active-color="#87cefa" bindchange="changeSwiper" current="current_index">
+		<swiper-item>
+			<view class="body">
+				<view class="AB">A</view>
+				<view class="input-section" wx:if="{{isClearA}}">
+					<view class="input-box">
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{0}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{10}}" wx:if="{{rowA>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{20}}" wx:if="{{rowA>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{30}}" wx:if="{{rowA>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{40}}" wx:if="{{rowA>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumA>1}}">
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{01}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{11}}" wx:if="{{rowA>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{21}}" wx:if="{{rowA>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{31}}" wx:if="{{rowA>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{41}}" wx:if="{{rowA>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumA>2}}">
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{02}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{12}}" wx:if="{{rowA>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{22}}" wx:if="{{rowA>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{32}}" wx:if="{{rowA>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{42}}" wx:if="{{rowA>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumA>3}}">
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{03}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{13}}" wx:if="{{rowA>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{23}}" wx:if="{{rowA>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{33}}" wx:if="{{rowA>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{43}}" wx:if="{{rowA>4}}"></input>
+					</view>
+					<view class="input-box" wx:if="{{coloumA>4}}">
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{04}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{14}}" wx:if="{{rowA>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{24}}" wx:if="{{rowA>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{34}}" wx:if="{{rowA>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputA" id="{{44}}" wx:if="{{rowA>4}}"></input>
+
+					</view>
+
+				</view>
+
+				<view class="picker-section">
+					<view class="picker1">
+						<picker-view indicator-class="indicator" class="picker" value="{{valueA1}}" bindchange="bindChangeA1">
+							<picker-view-column>
+								<view class="picker-show" wx:for="{{days}}" wx:key='*this'>{{item}}行</view>
+							</picker-view-column>
+						</picker-view>
+					</view>
+					<view class="picker2">
+						<picker-view class="picker" value="{{valueA2}}" bindchange="bindChangeA2">
+							<picker-view-column>
+								<view class="picker-show" wx:for="{{days}}" wx:key='*this' style="line-height: 50px">{{item}}列</view>
+							</picker-view-column>
+						</picker-view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<swiper-item>
+			<view class="body">
+				<view class="AB" >B</view>
+				<view class="input-section" wx:if="{{isClearB}}">
+					<view class="input-box">
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{0}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{10}}" wx:if="{{rowB>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{20}}" wx:if="{{rowB>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{30}}" wx:if="{{rowB>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{40}}" wx:if="{{rowB>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumB>1}}">
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{01}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{11}}" wx:if="{{rowB>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{21}}" wx:if="{{rowB>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{31}}" wx:if="{{rowB>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{41}}" wx:if="{{rowB>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumB>2}}">
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{02}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{12}}" wx:if="{{rowB>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{22}}" wx:if="{{rowB>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{32}}" wx:if="{{rowB>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{42}}" wx:if="{{rowB>4}}"></input>
+
+					</view>
+					<view class="input-box" wx:if="{{coloumB>3}}">
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{03}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{13}}" wx:if="{{rowB>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{23}}" wx:if="{{rowB>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{33}}" wx:if="{{rowB>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{43}}" wx:if="{{rowB>4}}"></input>
+					</view>
+					<view class="input-box" wx:if="{{coloumB>4}}">
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{04}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{14}}" wx:if="{{rowB>1}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{24}}" wx:if="{{rowB>2}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{34}}" wx:if="{{rowB>3}}"></input>
+						<input class="input" placeholder="0" bindinput="bindinputB" id="{{44}}" wx:if="{{rowB>4}}"></input>
+
+					</view>
+
+				</view>
+
+				<view class="picker-section">
+					<view class="picker1">
+						<picker-view class="picker" value="{{valueB1}}" bindchange="bindChangeB1">
+							<picker-view-column>
+								<view class="picker-show" wx:for="{{days}}" wx:key='*this'>{{item}}行</view>
+							</picker-view-column>
+						</picker-view>
+					</view>
+					<view class="picker2">
+						<picker-view class="picker" value="{{valueB2}}" bindchange="bindChangeB2">
+							<picker-view-column>
+								<view class="picker-show" wx:for="{{days}}" wx:key='*this'>{{item}}列</view>
+							</picker-view-column>
+						</picker-view>
+					</view>
+				</view>
+
+			</view>
+		</swiper-item>
+	</swiper>
+
+	<view class="op-section">
+		<view class="op-box">
+			<view class="opView" style="background-color:{{operator=='add'?'lightskyblue':'white'}}" bindtap="clickOperator" id="add">+</view>
+			<view class="opView" style="background-color:{{operator=='subtract'?'lightskyblue':'white'}}" bindtap="clickOperator" id="subtract">-</view>
+						<view class="opView" style="background-color:{{operator=='solve'?'lightskyblue':'white'}}" bindtap="clickOperator" id="solve">A*X=b</view>
+
+			<view class="opView" bindtap="clickOperator" style="background-color:{{operator=='Q'?'lightskyblue':'white'}}" id="Q">QR-Q</view>
+		</view>
+		<view class="op-box">
+			<view class="opView" style="background-color:{{operator=='multiply'?'lightskyblue':'white'}}" id="multiply" bindtap="clickOperator">*</view>
+			<view class="opView" style="background-color:{{operator=='divide'?'lightskyblue':'white'}}" id="divide" bindtap="clickOperator">/</view>
+			<view class="opView" style="background-color:{{operator=='pow'?'lightskyblue':'white'}}" id="pow" bindtap="clickOperator">^</view>
+
+			<view class="opView" style="background-color:{{operator=='R'?'lightskyblue':'white'}}" bindtap="clickOperator" id="R">QR-R</view>
+
+		</view>
+		<view class="op-box">
+			<view class="opView" style="background-color:{{operator=='dotMultiply'?'lightskyblue':'white'}}" bindtap="clickOperator" id="dotMultiply">.*</view>
+			<view class="opView" style="background-color:{{operator=='dotDivide'?'lightskyblue':'white'}}" id="dotDivide" bindtap="clickOperator">./</view>
+			<view class="opView" style="background-color:{{operator=='dotPow'?'lightskyblue':'white'}}" bindtap="clickOperator" id="dotPow">.^</view>
+			<view class="opView" style="background-color:{{operator=='L'?'lightskyblue':'white'}}" bindtap="clickOperator" id="L">LU-L</view>
+
+		</view>
+		<view class="op-box">
+			<view class="opView" style="color:{{isFraction?'orange':'black'}}" id="fraction" bindtap="clickOperator">分式</view>
+			<view class="opView" style="background-color:{{operator=='det'?'lightskyblue':'white'}}" bindtap="clickOperator" id="det">行列式</view>
+			<view class="opView" style="background-color:{{operator=='trace'?'lightskyblue':'white'}}" bindtap="clickOperator" id="trace">迹</view>
+			<view class="opView" style="background-color:{{operator=='U'?'lightskyblue':'white'}}" bindtap="clickOperator" id="U">LU-U</view>
+
+		</view>
+		<view class="op-box">
+			<view class="opView" style="background-color:{{operator=='transpose'?'lightskyblue':'white'}}" bindtap="clickOperator" id="transpose">转置</view>
+			<view class="opView" style="background-color:{{operator=='inv'?'lightskyblue':'white'}}" bindtap="clickOperator" id="inv">求逆</view>
+			<view class="opView" style="background-color:{{operator=='eigsValues'?'lightskyblue':'white'}}" bindtap="clickOperator" id="eigsValues">特征值</view>
+			<view class="opView" style="background-color:{{operator=='eigsVectors'?'lightskyblue':'white'}}" bindtap="clickOperator" id="eigsVectors">特征向量</view>
+		</view>
+		<view class="op-box">
+			<view class="opView" bindtap="love" hover-class="shadow">♡</view>
+			<view class="opView" bindtap="clear" bindlongtap="clearAll" id="clear" hover-class="shadow">C</view>
+			<view class="opView" bindtap="show" hover-class="shadow">=</view>
+
+		</view>
+	</view>
+
+	<view class="show-body">
+		<view class="show-section" bindtap="show">
+			<text>
+			{{res}}
+			</text>
+		</view>
+	</view>
+</view>
+
+
+<view class="float1 {{isShowAbout?'isShow':'isHide'}}" bindtap='hideAbout'>
+</view>
+<view class="{{isShowAbout?'isShow':'isHide'}}">
+	<scroll-view class='floatContent' scroll-y="true">
+		<view class="guide">
+			<text class="headline">矩阵计算功能简介</text>
+			<text class="p p1">---------向上滑动---------</text>
+			<text class="p">C-------  --清除,长按可复位A B 两个矩阵的数据</text>
+			<text class="p">A/B----  ---选择需要计算数据的矩阵</text>
+			<text class="p">+/- --------加减运算</text>
+			<text class="p">*-----------乘法运算,须符合矩阵乘法规则：[mn]*[nm]=[mm]</text>
+			<text class="p"></text>
+			<text class="p">/ ------------A/B 等同于A*(B的逆矩阵)，B要为可逆矩阵</text>
+			<text class="p">.*------------点乘运算</text>
+			<text class="p">./------------点除运算,被点除矩阵其元素不能为0</text>
+			<text class="p">^-------------幂运算  a^3 = a*a*a</text>
+			<text class="p">.^------------点幂运算，a.^2，为a中所有元素逐一做平方运算，目前幂运算的指数只能为整数，暂且不支持分数运算</text>
+			<text class="p">det-----------行列式</text>
+			<text class="p">trace---------迹</text>
+			<text class="p">分式-----------分数 / 小数模式切换</text>
+			<text class="p">A*X=b----------解方程,求X，A为[n*n]矩阵,b是一个[n]列向量</text>
+			<text class="p">QR-Q-----------QR分解，求Q</text>
+			<text class="p">QR-Q-----------QR分解，求R,QR暂不支持分式分式运算</text>
+			<text class="p">LU-L-----------LU分解，求L</text>
+			<text class="p">LU-U-----------LU分解，求U</text>
+			<text class="p">注： </text>
+			<text class="p">1，输入时可输入数学算式，如：2+3*5/9 等</text>
+			<text class="p">2，上下滑动3行3列可改变矩阵的行列数，目前最大支持5行5列矩阵。</text>
+			<text class="p">3，点击显示区域也可以得到计算结果</text>
+			<text class="p">4，目前正处于开发测试阶段，尚存在未知问题，请谅解</text>
+			<text class="p">5，准确的输入是计算准确的前提。</text>
+
+			<text class="p p1">-------点击阴影部分退出-------</text>
+			<text class="p"> 计算实例1：</text>
+			<text class="code-dark">A = [[-2, 3], [2, 1]]
+b = [11, 9]
+A*x=b,
+则x = [[2], [5]]</text>
+			<text class="p"> 计算实例2：</text>
+			<text class="code-dark">A = [[9, 5], [6, 1]]
+B = [[3, 2], [5, 2]]
+X =A/B=[[1.75, 0.75], [-1.75, 2.25]]
+X =A./B=[[3, 2.5], [1.2, 0.5]]
+
+X =A*B=[[52, 28], [23, 14]]
+X =A.*B=[[27, 10], [30, 2]]</text>
+			<text class="p"> 计算实例3：</text>
+			<text class="code-dark">A = [[1, 2], [4, 3]]
+X =A^2=A*A=[[9, 8], [16, 17]]
+X =A.^2=[[1, 4], [16, 9]]</text>
+		</view>
+	</scroll-view>
+</view>

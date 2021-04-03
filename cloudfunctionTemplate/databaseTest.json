@@ -1,0 +1,9 @@
+[
+  {
+    "name": "databaseTest",
+    "value": {
+      "requestType": "msgSecCheck",
+      "content": "你好"
+    }
+  }
+]

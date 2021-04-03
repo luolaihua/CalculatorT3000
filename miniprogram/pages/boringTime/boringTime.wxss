@@ -1,0 +1,41 @@
+/* miniprogram/pages/boringTime/boringTime.wxss */
+.body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.infoIcon{
+  height: 4vh;
+  width: 4vh;
+  position: fixed;
+  z-index: 2;
+  top: 0.5vh;
+  right: 10rpx;
+  opacity: 1;
+}
+
+.max{
+  position: fixed;
+  top: 1vh;
+  left: 2vw;
+}
+.show{
+  font-size: 60rpx;
+}
+image{
+  width: 15vw;
+  height: 15vw;
+  margin: 20rpx;
+}
+.showFace{
+  width: 90vw;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

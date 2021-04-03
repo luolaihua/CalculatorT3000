@@ -1,0 +1,22 @@
+/* miniprogram/pages/nameMade/nameMade.wxss *//* miniprogram/pages/beijinghua/beijinghua.wxss */
+@import "../../style/weui.wxss";
+page,.page{height:100%;}
+.content{
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  align-items: center;
+  margin: 60rpx 40rpx;
+  font-size: 100rpx;
+
+}
+.weui-form__opr-area {
+  margin-bottom: 58px
+}
+
+.weui-form__opr-area:last-child {
+  margin-bottom: 80px
+}
+.weui-input{
+  text-align: center;
+}

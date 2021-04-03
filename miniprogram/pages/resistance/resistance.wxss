@@ -1,0 +1,133 @@
+/* miniprogram/pages/resistance/resistance.wxss */
+.body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20vh;
+  background-color: skyblue;
+}
+
+.body_text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5vh;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  border-top:1px solid darkgray ;
+
+}
+
+.value1 {
+  flex: 2;
+  font-size: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+.value2 {
+  flex: 1;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.t {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40rpx;
+}
+
+.t1 {
+  margin-left: 150rpx;
+  width: 40rpx;
+}
+
+.t2 {
+  margin-left: 50rpx;
+  width: 40rpx;
+}
+
+.t3 {
+  margin-left: 50rpx;
+  width: 40rpx;
+}
+
+.t4 {
+  margin-left: 50rpx;
+  width: 40rpx;
+}
+
+.t5 {
+  margin-left: 120rpx;
+  width: 40rpx;
+}
+
+.v1 {
+  margin-left: 150rpx;
+  width: 40rpx;
+
+}
+
+.v2 {
+  margin-left: 50rpx;
+  width: 40rpx;
+
+}
+
+.v3 {
+  margin-left: 50rpx;
+  width: 40rpx;
+
+}
+
+.v4 {
+  margin-left: 50rpx;
+  width: 40rpx;
+
+}
+
+.v5 {
+  margin-left: 120rpx;
+  width: 40rpx;
+
+}
+
+.color {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.color-box {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.c1 {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+.c2{
+  background-color: lightblue;
+
+}
+.shadow{
+  color: brown;
+  font-size: larger;
+  font-weight: bolder;
+}

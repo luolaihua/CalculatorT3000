@@ -1,0 +1,18 @@
+<!--miniprogram/pages/counter/counter.wxml-->
+<view class="content" hover-class="opBtn-hover2" bindlongtap="clear">{{num}}</view>
+<view class="btn-box">
+	<button class="opBtn" hover-class="opBtn-hover1" style="height:25vh;width:25vh">
+		<image bindtap="sub" class="opImg" mode="aspectFit" src="{{imgList[0]}}"></image>
+	</button>
+	<button class="opBtn" hover-class="opBtn-hover2" style="height:25vh;width:25vh;">
+		<image bindtap="add" class="opImg" mode="aspectFit" src="{{imgList[1]}}"></image>
+	</button>
+</view>
+<view class="setting-box " bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+	<view  class="setting-box1  {{!isOpen?'left':'right'}}">
+		
+		<image bindtap="chooseSound" class="setting" src="{{whichSound==0?imgList[4]:whichSound==1?imgList[3]:imgList[7]}}" mode="aspectFit"></image>
+		<image bindtap="isVibrate" class="setting {{isVibrate?'':'noVibrate'}}" src="{{imgList[6]}}" mode="aspectFit"></image>
+		<image bindtap="help" class="setting" src="{{imgList[2]}}" mode="aspectFit"></image>
+	</view>
+</view>

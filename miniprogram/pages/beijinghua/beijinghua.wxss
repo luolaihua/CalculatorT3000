@@ -1,0 +1,17 @@
+/* miniprogram/pages/beijinghua/beijinghua.wxss */
+@import "../../style/weui.wxss";
+page,.page{height:100%;}
+.content{
+  margin: 20rpx 40rpx;
+  text-align: center;
+  font-size: 40rpx;
+  word-wrap: break-word;
+
+}
+.weui-form__opr-area {
+  margin-bottom: 30px
+}
+
+.weui-form__opr-area:last-child {
+  margin-bottom: 50px
+}

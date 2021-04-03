@@ -1,0 +1,6 @@
+/* miniprogram/pages/menu/menu.wxss */
+@import "../../style/weui.wxss";
+.adContainer {
+  margin-top: 20px;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+<!--miniprogram/pages/petAge/ageCalculate/ageCalculate.wxml-->
+<view class="image-box">
+<image bindtap="isShowHumanAge" class="img" src="{{!isShowHumanAge?petUrl:humanUrl}}" mode="aspectFit"></image>
+</view>
+
+  <text wx:if="{{isShowHumanAge}}" class="title" bindtap="isShowHumanAge">人类年龄</text>
+  <text wx:if="{{!isShowHumanAge}}" class="title" bindtap="isShowHumanAge">{{petName}}年龄</text>
+<view class="input-box">
+	<input placeholder="0" type="number" maxlength="2" bindinput="inputYear"></input>
+  <view>岁</view>
+  	<input placeholder="0" type="number" maxlength="2"  bindinput="inputMonth"></input>
+  <view>月</view>
+</view>
+<button type="primary" style="width:90vw" bindtap="calculate">计算</button>
+<view wx:if="{{!isShowHumanAge&&pet2humanAge!=0}}" class="show-box">
+  <text class="title2">相当于人类年龄</text>
+  <text class="content">{{pet2humanAge}}</text>
+</view>
+<view  wx:if="{{isShowHumanAge&&human2PetAge!=0}}" class="show-box">
+  <text class="title2">相当于{{petName}}年龄</text>
+  <text class="content">{{human2PetAge}}</text>
+</view>

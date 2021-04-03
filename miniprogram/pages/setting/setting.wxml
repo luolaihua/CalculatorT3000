@@ -1,0 +1,51 @@
+<!--miniprogram/pages/setting/setting.wxml-->
+<block wx:if="{{nickName!=''}}">
+	<view class="userInfo" hover-class="none" hover-stop-propagation="false">
+		<image bindtap="changeAvatar" src="{{avatarUrl}}" class="avatar" />
+		<view class="nickName" hover-class="none" hover-stop-propagation="false">
+			<text style="margin-right:20rpx">{{nickName}}</text>
+			<navigator url="../nameMade/nameMade">
+				<image src="{{editUrl}}" class="editName" mode="scaleToFill" />
+			</navigator>
+		</view>
+	</view>
+</block>
+
+<button class="btn-box" style="width: calc(100% - 20px);" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+	<view class="modules_title_box">{{nickName==''?'获取用户名和头像':nickName}}</view>
+	<image class="modules_icon" mode="scaleToFill" src="{{avatarUrl}}" />
+</button>
+<view class="modules_box">
+	<view class="modules_icon_box">
+		<image class="modules_icon" mode="scaleToFill" src="{{touchUrl}}" />
+	</view>
+	<view class="modules_title_box">触摸反馈</view>
+	<view class="modules_switch_box">
+		<switch bindchange="switchChangeVibrate" checked="{{isVibrate_setting}}" class="modules_switch" type="switch" />
+	</view>
+</view>
+
+<button class="btn-box" style="width: calc(100% - 20px);" open-type="contact">
+	<view class="modules_title_box">机器人客服</view>
+	<image class="modules_icon" mode="scaleToFill" src="{{peopleUrl}}" />
+</button>
+<button class="btn-box" style="width: calc(100% - 20px);" open-type="feedback">
+	<view class="modules_title_box">意见反馈</view>
+	<image class="modules_icon_small" mode="scaleToFill" src="{{feedBackUrl}}" />
+</button>
+
+<!--
+<button class="btn-box" style="width: calc(100% - 20px);" bindtap="showAd">
+	<view class="modules_title_box">观看广告鼓励作者</view>
+	<image class="modules_icon_small" mode="scaleToFill" src="{{adUrl}}" />
+</button>
+-->
+<view class="adContainer">
+	<ad unit-id="adunit-7e6b6cc3f1d032c8" bindload="adLoad" binderror="adError" bindclose="adClose"></ad>
+</view>
+<!--
+	<button bindtap="sendMessage">发送订阅消息</button>
+<button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" type="primary">登录</button>
+<button bindtap="getOpenId">获取OPID</button>
+
+-->

@@ -1,0 +1,37 @@
+<!--miniprogram/pages/iqGame/iqGame.wxml-->
+<view class="count">第--{{successNum}}--关</view>
+<view class="nandu">{{grade}}</view>
+<image bindtap="toInfo" class="infoIcon" 
+src="https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/info.png?sign=d34812d50f262f6de132e13556881533&t=1584065908" mode="aspectFit"></image>
+<view class="time-box">
+	<view class="time">倒计时：{{time}}</view>
+</view>
+
+
+<view class="question-box">
+	<view class="num">{{num1}}</view>
+	<view class="operator">{{operator}}</view>
+	<view class="num">{{num2}}</view>
+	<view class="operator">=</view>
+	<view class="num">?</view>
+</view>
+<view class="answer-box">
+	<view class="ans" id="0" bindtap="answerBtn">{{ansArr[0]}}</view>
+	<view class="ans" id="1" bindtap="answerBtn">{{ansArr[1]}}</view>
+	<view class="ans" id="2" bindtap="answerBtn">{{ansArr[2]}}</view>
+</view>
+<view class="answer-box">
+	<view class="ans" id="3" bindtap="answerBtn">{{ansArr[3]}}</view>
+	<view class="ans" id="4" bindtap="answerBtn">{{ansArr[4]}}</view>
+	<view class="ans" id="5" bindtap="answerBtn">{{ansArr[5]}}</view>
+</view>
+<view  bindtap="startGame" class="result" wx:if="{{condition=='noTap'}}">开始</view>
+<view class="result" wx:if="{{condition=='right'}}">答对啦</view>
+<view class="result" wx:if="{{condition=='wrong'}}">答错啦</view>
+<view class="result" wx:if="{{condition=='answering'}}"></view>
+<view class="restart-next">
+
+	<view class="restart" bindtap="myAwards">正确率{{rightPercent}}%</view>
+	<view class="next" wx:if="{{condition=='right'}}" bindtap="next">下一关</view>
+  	<view class="next" wx:if="{{condition=='wrong'}}" bindtap="restart">重来</view>
+</view>

@@ -1,0 +1,43 @@
+
+<block wx:if="{{isShowScreen}}">
+	<view class="text">{{screenData}}</view>
+	<!-- 用来显示结果 -->
+	<view class="result">{{result}} </view>
+</block>
+<block wx:else>
+	<view style="color:white;padding-left:40rpx;margin-top:60rpx">你叫TA:</view>
+	<view class="inputBox">
+		<input class="input" placeholder="请输入称呼" value="{{inputValue}}" auto-focus="true" bindinput="inputChain"></input>
+		<button class="ok" bindtap="clearBtn">清除</button>
+	</view>
+	<view style="color:white;padding-left:40rpx" wx:if="{{chain !=''}}"> TA是你：</view>
+	<view class="show">{{chain}}</view>
+</block>
+<image bindtap="introduction" class="about" src="{{relative_questionMark}}" mode="aspectFit"></image>
+<!-- 显示按钮功能 style="height:{{second_height}}px"-->
+<view class="btngroup">
+	<view class="btnBox">
+		<button class="btn " bindtap="clickButton" hover-class='shadow' style="width:25vw" id="{{id_h}}">夫</button>
+		<button class="btn " bindtap="clickButton" id="{{id_w}}" hover-class='shadow' style="width:25vw">妻</button>
+		<button class="btn orange1" bindtap="loveBtn" id="{{id_love}}" hover-class='shadow' style="width:25vw">♡</button>
+		<button class="btn orange" bindtap="clickButton" id="{{id_clear}}" hover-class='shadow' style="width:25vw">C</button>
+	</view>
+	<view class="btnBox">
+		<button class="btn " bindtap="clickButton" id="{{id_f}}" hover-class='shadow' style="width:25vw">父</button>
+		<button class="btn " bindtap="clickButton" id="{{id_m}}" hover-class='shadow' style="width:25vw">母</button>
+		<button class="btn orange1" bindtap="changeSex" id="{{id_sex}}" hover-class='shadow' style="width:25vw">{{sex_text}}</button>
+		<button class="btn orange" bindtap="clickButton" id="{{id_back}}" hover-class='shadow' style="width:25vw">←</button>
+	</view>
+	<view class="btnBox">
+		<button class="btn " bindtap="clickButton" id="{{id_bb}}" hover-class='shadow' style="width:25vw">兄</button>
+		<button class="btn " bindtap="clickButton" id="{{id_sb}}" hover-class='shadow' style="width:25vw">弟</button>
+		<button class="btn " bindtap="clickButton" id="{{id_son}}" hover-class='shadow' style="width:25vw">子</button>
+		<button class="btn orange" bindtap="clickButton" id="{{id_inverse}}" hover-class='shadow' style="width:25vw">互查</button>
+	</view>
+	<view class="btnBox">
+		<button class="btn " bindtap="clickButton" id="{{id_bs}}" hover-class='shadow' style="width:25vw">姐</button>
+		<button class="btn " bindtap="clickButton" id="{{id_ss}}" hover-class='shadow' style="width:25vw">妹</button>
+		<button class="btn " bindtap="clickButton" id="{{id_d}}" hover-class='shadow' style="width:25vw">女</button>
+		<button class="btn orange" bindtap="setting" hover-class='shadow' style="width:25vw">۞</button>
+	</view>
+</view>

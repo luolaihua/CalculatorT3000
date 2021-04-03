@@ -1,0 +1,74 @@
+/* miniprogram/pages/qrCode/qrCode.wxss */
+.title {
+  text-align: center;
+  font-size: 70rpx;
+  margin-top: 10vh;
+
+}
+
+.input-box {
+  width: 90vw;
+  height: 12vh;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: darkgrey solid 1px;
+  border-top: darkgrey solid 1px;
+
+
+}
+
+.input-box input {
+  height: 8vh;
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.barcode {
+  display: flex;
+  height: 320rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.barnum {
+  width: 670rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10rpx;
+  white-space: nowrap;
+}
+
+.barcode>canvas {
+  width: 680rpx;
+  height: 200rpx;
+}
+
+.qrcode {
+  margin-top: 5vh;
+  height: 420rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.qrcode>canvas {
+  width: 420rpx;
+  height: 420rpx;
+}

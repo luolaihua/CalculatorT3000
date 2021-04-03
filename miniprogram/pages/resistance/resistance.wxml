@@ -1,0 +1,59 @@
+<!--miniprogram/pages/resistance/resistance.wxml-->
+<view class="body_text">
+	<view class="t1 t">{{c1}}</view>
+	<view class="t2 t">{{c2}}</view>
+	<view wx:if="{{huan=='五环'}}" class="t3 t">{{c3}}</view>
+	<view class="t4 t">{{c4}}</view>
+	<view class="t5 t">{{c5}}</view>
+</view>
+<view class="body">
+	<view class="v1" id="0" bindtap="colorValue" style="background-color:{{color1}}"></view>
+	<view class="v2" id="1" bindtap="colorValue" style="background-color:{{color2}}"></view>
+	<view wx:if="{{huan=='五环'}}" class="v3" id="2" bindtap="colorValue" style="background-color:{{color3}}"></view>
+	<view class="v4" id="3" bindtap="colorValue" style="background-color:{{color4}}"></view>
+	<view class="v5" id="4" bindtap="colorValue" style="background-color:{{color5}}"></view>
+</view>
+<view class="body_text">
+	<view class="t1 t">{{colorId=='0'?'↑':' '}}</view>
+	<view class="t2 t">{{colorId=='1'?'↑':' '}}</view>
+	<view wx:if="{{huan=='五环'}}"  class="t3 t">{{colorId=='2'?'↑':' '}}</view>
+	<view class="t4 t">{{colorId=='3'?'↑':' '}}</view>
+	<view class="t5 t">{{colorId=='4'?'↑':' '}}</view>
+</view>
+<view class="content">
+	<view class="value1">
+		阻值：{{res}} Ω
+	</view>
+	<view class="value2">
+		精度：± {{percent}}%
+	</view>
+</view>
+<view class="color">
+	<view class="color-box">
+		<view class="c1" bindtap="colorChoose" id="0" style="background-color:black;color:white" hover-class="shadow">黑</view>
+		<view class="c1" bindtap="colorChoose" id="1" style="background-color:brown;color:white" hover-class="shadow">棕</view>
+		<view class="c1" bindtap="colorChoose" id="2" style="background-color:red;color:white" hover-class="shadow">红</view>
+		<view class="c1" bindtap="colorChoose" id="3" style="background-color:orange;color:white" hover-class="shadow">橙</view>
+	</view>
+  	<view class="color-box">
+		<view class="c1" bindtap="colorChoose" id="4" style="background-color:yellow;color:black" hover-class="shadow">黄</view>
+		<view class="c1" bindtap="colorChoose" id="5" style="background-color:green;color:white" hover-class="shadow">绿</view>
+		<view class="c1" bindtap="colorChoose" id="6" style="background-color:blue;color:white" hover-class="shadow">蓝</view>
+		<view class="c1" bindtap="colorChoose" id="7" style="background-color:purple;color:white" hover-class="shadow">紫</view>
+	</view>
+  	<view class="color-box">
+		<view class="c1" bindtap="colorChoose" id="8" style="background-color:grey;color:black" hover-class="shadow">灰</view>
+		<view class="c1" bindtap="colorChoose" id="9" style="background-color:white;color:black" hover-class="shadow">白</view>
+		<view class="c1" bindtap="colorChoose" id="10" style="background-color:gold;color:black" hover-class="shadow">金</view>
+		<view class="c1" bindtap="colorChoose" id="11" style="background-color:silver;color:black" hover-class="shadow">银</view>
+	</view>
+  	<view class="color-box">
+		<view class="c1 c2" bindtap="changeHuan" hover-class="shadow">{{huan}}</view>
+		<navigator url="../aboutResistance/aboutResistance">
+				<view class="c1 c2" bindtap="clear"  style="font-size:60rpx" hover-class="shadow">♡</view>
+		</navigator>
+
+		<view class="c1 c2" bindtap="clear" style="font-size:50rpx" hover-class="shadow">C</view>
+		<view class="c1 c2" bindtap="equalBtn"  style="font-size:60rpx" hover-class="shadow">=</view>
+	</view>
+</view>

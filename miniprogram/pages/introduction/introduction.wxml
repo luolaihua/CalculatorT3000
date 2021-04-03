@@ -1,0 +1,32 @@
+<!--miniprogram/pages/introduction/introduction.wxml-->
+<scroll-view>
+	<view>
+		<view style="font-size:50rpx;text-align:center">
+			使用说明
+		</view>
+		<view style="font-size:40rpx;font-weight:600;">
+			<text decode="true" space="nbsp">
+			使用前先通过  ♀/♂  按钮选择您的性别
+			C     clear button 清除屏幕
+			←     backspace button 退格
+			♡     亲戚关系查找/亲戚关系计算功能切换
+
+
+			
+			</text>
+		</view>
+		<view style="font-size:30rpx;text-align:left">
+			注：本作者支持同性婚姻合法化，尊重每一个人的性取向。但亲戚计算器上男生的丈夫，女生的妻子这类问题，奈何作者才疏学浅，见识浅薄，暂不能找到合适的称呼。
+		</view>
+	</view>
+</scroll-view>
+  <view class="weui-form" style="background: #f6f6f6;">
+  		<view class="weui-form__extra-area ">
+			<view class="weui-footer">
+       <view class="weui-footer__links">
+            <view bindtap="copyLink" class="weui-footer__link">源自GitHub开源项目</view>
+          </view>
+				<text selectable="true" class="weui-footer__text">https://github.com/mumuy/relationship</text>
+			</view>
+		</view>
+  </view>

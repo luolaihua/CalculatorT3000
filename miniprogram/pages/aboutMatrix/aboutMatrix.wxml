@@ -1,0 +1,7 @@
+<!--miniprogram/pages/aboutMatrix/aboutMatrix.wxml-->
+<view class="section section_gap">
+	<text class="section__title">计算精度(小数点保留位数)</text>
+	<view class="body-view">
+		<slider bindchange="sliderchange" min="1" max="16" show-value value="6"/>
+	</view>
+</view>

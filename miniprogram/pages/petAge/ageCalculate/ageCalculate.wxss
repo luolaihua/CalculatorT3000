@@ -1,0 +1,51 @@
+/* miniprogram/pages/petAge/ageCalculate/ageCalculate.wxss */
+.img{
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+}
+.title{
+  font-size: 50rpx;
+  text-align: center;
+  margin-top: 5vh;
+}
+.show-box{
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title2{
+  font-size: 50rpx;
+  text-align: center;
+}
+.content{
+  margin-top: 5vh;
+  font-size: 50rpx;
+  text-align: center;
+}
+.input-box{
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  padding:0 5vw;
+}
+.input-box,.input-box input,.input-box view,.image-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 40rpx;
+}
+.input-box input{
+text-align: center;
+  height: 10vh;
+  width: 30vw;
+ border-bottom: gainsboro 1px solid;
+
+}
+.input-box view{
+  height: 10vh;
+  width: 15vw;
+}

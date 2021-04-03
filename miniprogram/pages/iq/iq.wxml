@@ -1,0 +1,10 @@
+<!--miniprogram/pages/iq/iq.wxml-->
+<view class="deng-box">
+	<view class="deng" bindtap="iq" wx:if='{{isLight}}'>
+    <image src="{{light_icon}}" mode="aspectFit" style="width:200rpx;height:200rpx"></image>
+	</view>
+  	<view class="deng" bindtap="iq" wx:if='{{!isLight}}'>
+    <image src="{{dark_icon}}" mode="aspectFit" style="width:200rpx;height:200rpx"></image>
+	</view>
+</view>
+

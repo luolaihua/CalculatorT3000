@@ -1,0 +1,10 @@
+/* miniprogram/pages/welcome/welcome.wxss */
+.image{
+  margin-top: 60rpx;
+  padding: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  background-color: darkturquoise;
+}

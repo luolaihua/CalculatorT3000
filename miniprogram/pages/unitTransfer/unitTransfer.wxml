@@ -1,0 +1,136 @@
+<!--miniprogram/pages/unitTransfer/unitTransfer.wxml-->
+<view class="body">
+	<swiper style="height:18vh">
+		<swiper-item>
+			<view class="viewGroup">
+				<view class="viewBox">
+					<view class="v1" style="color:{{id=='length'?'orange':'black'}}" id="{{id_length}}" bindtap="chooseUnit" hover-class="shadow1">长度</view>
+					<view class="v1" style="color:{{id=='energy'?'orange':'black'}}" id="{{id_energy}}" bindtap="chooseUnit" hover-class="shadow1">能量</view>
+					<view class="v1" style="color:{{id=='time'?'orange':'black'}}" id="{{id_time}}" bindtap="chooseUnit" hover-class="shadow1">时间</view>
+					<view class="v1" style="color:{{id=='volume'?'orange':'black'}}" id="{{id_volume}}" bindtap="chooseUnit" hover-class="shadow1">体积</view>
+				</view>
+				<view class="viewBox">
+					<view class="v1" style="color:{{id=='big'?'orange':'black'}}" id="{{id_big}}" bindtap="chooseUnit" hover-class="shadow1">大写</view>
+					<view class="v1" style="color:{{id=='area'?'orange':'black'}}" id="{{id_area}}" bindtap="chooseUnit" hover-class="shadow1">面积</view>
+					<view class="v1" style="color:{{id=='mass'?'orange':'black'}}" id="{{id_mass}}" bindtap="chooseUnit" hover-class="shadow1">质量</view>
+					<view class="v1" style="color:{{id=='temperature'?'orange':'black'}}" id="{{id_temperature}}" bindtap="chooseUnit" hover-class="shadow1">温度</view>
+				</view>
+				<view class="viewBox">
+					<view class="v1" style="color:{{id=='velocity'?'orange':'black'}}" id="{{id_velocity}}" bindtap="chooseUnit" hover-class="shadow1">速度</view>
+					<view class="v1" style="color:{{id=='jinzhi'?'orange':'black'}}" id="{{id_jinzhi}}" bindtap="chooseUnit" hover-class="shadow1">进制</view>
+					<view class="v1" style="color:{{id=='power'?'orange':'black'}}" id="{{id_power}}" bindtap="chooseUnit" hover-class="shadow1">功率</view>
+					<view class="v1" style="color:{{id=='presure'?'orange':'black'}}" id="{{id_presure}}" bindtap="chooseUnit" hover-class="shadow1">压强</view>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+	<view class="unit-section" wx:if="{{showWhichSection=='unit'||showWhichSection=='temperature'}}">
+		<view class="show-section">
+			<view class="select">
+				<picker wx:if="{{id}}=='length'" bindchange="bindPickerChange1" range="{{array}}" style="font-size:40rpx">
+					<view class="picker">
+						{{array[index1]}}
+						<text>></text>
+					</view>
+				</picker>
+			</view>
+			<view class="show" bindtap="choose1" style="color:{{isChoose?'orange':'black'}}">
+				{{res1}}
+			</view>
+			<view class="showUnit">{{showUnit1}}</view>
+		</view>
+		<view class="show-section">
+			<view class="select">
+				<picker wx:if="{{id}}=='length'" bindchange="bindPickerChange2" range="{{array}}" style="font-size:40rpx">
+					<view class="picker">
+						{{array[index2]}}
+						<text>></text>
+					</view>
+				</picker>
+			</view>
+			<view class="show" bindtap="choose2" style="color:{{!isChoose?'orange':'black'}}">
+				{{res2}}
+			</view>
+			<view class="showUnit">{{showUnit2}}</view>
+		</view>
+	</view>
+
+	<view class="jinzhi-section" wx:if="{{showWhichSection=='jinzhi'}}">
+		<view class="show-section">
+			<view class="jinzhi-select">
+				<picker wx:if="{{id}}=='length'" bindchange="bindPickerChange1" range="{{array}}" style="font-size:40rpx">
+					<view class="picker">
+						{{array[index1]}}
+						<text>></text>
+					</view>
+				</picker>
+			</view>
+			<view class="show" bindtap="choose1" style="color:{{isChoose?'orange':'black'}}">
+				{{res1}}
+			</view>
+		</view>
+		<view class="show-section">
+			<view class="jinzhi-select">
+				<picker wx:if="{{id}}=='length'" bindchange="bindPickerChange2" range="{{array}}" style="font-size:40rpx">
+					<view class="picker">
+						{{array[index2]}}
+						<text>></text>
+					</view>
+				</picker>
+			</view>
+			<view class="show" bindtap="choose2" style="color:{{!isChoose?'orange':'black'}}">
+				{{res2}}
+			</view>
+		</view>
+	</view>
+
+	<view class="daxie-section" wx:if="{{showWhichSection=='daxie'}}">
+		<view class="show-section">
+			<view class="show" style="color:orange">
+				{{res1}}
+			</view>
+		</view>
+		<view class="show-section">
+			<view class="show" style="color:black">
+				{{res2}}
+			</view>
+		</view>
+	</view>
+
+
+	<view class="input-section">
+		<view class="inputBox">
+			<view class="v2" id='{{id7}}' bindtap="inputBtn" hover-class="shadow2">7</view>
+			<view class="v2" id='{{id4}}' bindtap="inputBtn" hover-class="shadow2">4</view>
+			<view class="v2" id='{{id1}}' bindtap="inputBtn" hover-class="shadow2">1</view>
+			<view class="v2" bindtap="loveBtn" hover-class="shadow2">♡</view>
+		</view>
+		<view class="inputBox">
+			<view class="v2" id='{{id8}}' bindtap="inputBtn" hover-class="shadow2">8</view>
+			<view class="v2" id='{{id5}}' bindtap="inputBtn" hover-class="shadow2">5</view>
+			<view class="v2" id='{{id2}}' bindtap="inputBtn" hover-class="shadow2">2</view>
+			<view class="v2" id='{{id0}}' bindtap="inputBtn" hover-class="shadow2">0</view>
+		</view>
+		<view class="inputBox">
+			<view class="v2" id='{{id9}}' bindtap="inputBtn" hover-class="shadow2">9</view>
+			<view class="v2" id='{{id6}}' bindtap="inputBtn" hover-class="shadow2">6</view>
+			<view class="v2" id='{{id3}}' bindtap="inputBtn" hover-class="shadow2">3</view>
+			<view class="v2" id='{{id_dot}}' bindtap="inputBtn" hover-class="shadow2">.</view>
+		</view>
+		<view class="inputBox" wx:if="{{showWhichSection=='jinzhi'}}">
+			<view class="v2" id='{{id_D}}' bindtap="inputBtn" hover-class="shadow2">D</view>
+			<view class="v2" id='{{id_C}}' bindtap="inputBtn" hover-class="shadow2">C</view>
+			<view class="v2" id='{{id_B}}' bindtap="inputBtn" hover-class="shadow2">B</view>
+			<view class="v2" id='{{id_A}}' bindtap="inputBtn" hover-class="shadow2">A</view>
+		</view>
+		<view class="inputBox">
+			<view class="v2" id='{{id_E}}' bindtap="inputBtn" hover-class="shadow2" wx:if="{{showWhichSection=='jinzhi'}}">E</view>
+			<view class="v2" id='{{id_F}}' bindtap="inputBtn" hover-class="shadow2" wx:if="{{showWhichSection=='jinzhi'}}">F</view>
+			<view class="op" bindtap="zhengfu" hover-class="shadow2" wx:if="{{showWhichSection=='temperature'}}">+/-</view>
+			<view class="op" id='{{id_d}}' bindtap="inputBtn" hover-class="shadow2">←</view>
+			<view class="op" id='{{id_clear}}' bindtap="clearBtn" hover-class="shadow2">C</view>
+
+		</view>
+
+	</view>
+</view>

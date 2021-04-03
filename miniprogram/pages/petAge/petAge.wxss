@@ -1,0 +1,2 @@
+/* miniprogram/pages/petAge/petAge.wxss */
+@import "../../style/weui.wxss";

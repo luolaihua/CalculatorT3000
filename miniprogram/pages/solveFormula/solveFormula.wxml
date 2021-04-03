@@ -1,0 +1,151 @@
+<!-- miniprogram/pages/solveFormula/solveFormula.wxml -->
+<view class="picker-section">
+	<view class="picker1">
+		<picker-view
+		 mask-class='mask'
+		 indicator-class='indicator'
+		 class="picker"
+		 value="{{NumOfYuan}}"
+		 bindchange="bindChangeYuan"
+		>
+			<picker-view-column>
+				<view
+				 class="pickerContent"
+				 wx:for="{{ci}}"
+				 wx:key='*this'
+				 style="line-height: 50px"
+				>
+					{{item}}元
+				</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+	<view class="picker1">
+		<picker-view
+		 mask-class='mask'
+		 indicator-class='indicator'
+		 class="picker"
+		 value="{{NumOfCi}}"
+		 bindchange="bindChangeCi"
+		>
+			<picker-view-column>
+				<view
+				 class="pickerContent"
+				 wx:for="{{indexOfYuan!=0?yuan:ci}}"
+				 wx:key='*this'
+				 style="line-height: 50px"
+				>
+					{{item}}次
+				</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+</view>
+<block wx:if="{{indexOfYuan==0}}">
+	<view class="formula-box">
+		<view class="showFormula">{{formulaList[indexOfShow]}}</view>
+	</view>
+	<view class="para-box">
+		<block wx:for="{{paraList}}" wx:key="index">
+			<view class="paraInput-box borderTop" wx:if="{{indexOfShow+2>index}}">
+				<text class="paraText">{{item.name}} =</text>
+				<input
+				 value="{{item.value==0?'':item.value}}"
+				 class="paraInput"
+				 placeholder="0"
+				 bindinput="inputPara"
+				 id="{{index}}"
+				/>
+				<image
+				 id="{{index}}"
+				 bindtap="paraDelete"
+				 class="paraDelete"
+				 src="https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/delete.png?sign=07fe7c6506fcf1edacf83f3f207d8c84&t=1585050844"
+				 mode="aspectFit"
+				/>
+			</view>
+		</block>
+	</view>
+</block>
+<block wx:else>
+	<view wx:for="{{formulaList3}}" class="formula-box2" wx:key="index">
+		<view class="formulaContent2" wx:if="{{indexOfYuan>=index}}">
+			<input
+			 data-index="{{index}}"
+			 id="0"
+			 bindfocus="choosePara"
+			 bindblur="changeColor"
+			 bindinput="inputPara2"
+			 value="{{numList2[index][0]==0?'':numList2[index][0]}}"
+			 style="background-color:{{(index==currentParaIndex&&currentParaId=='0')?'lightblue':''}};width:{{indexOfYuan==1?'20vw':indexOfYuan==2?'15vw':'12vw'}}"
+			 placeholder="{{item[0]}}"
+			/>
+			<text space="ensp">X+</text>
+			<input
+			 data-index="{{index}}"
+			 id="1"
+			 bindfocus="choosePara"
+			 bindblur="changeColor"
+			 bindinput="inputPara2"
+			 value="{{numList2[index][1]==0?'':numList2[index][1]}}"
+			 style="background-color:{{(index==currentParaIndex&&currentParaId=='1')?'lightblue':''}};width:{{indexOfYuan==1?'20vw':indexOfYuan==2?'15vw':'12vw'}}"
+			 placeholder="{{item[1]}}"
+			/>
+			<text space="ensp">{{indexOfYuan==1?'Y=':'Y+'}}</text>
+			<input
+			 data-index="{{index}}"
+			 id="2"
+			 bindfocus="choosePara"
+			 bindblur="changeColor"
+			 bindinput="inputPara2"
+			 value="{{numList2[index][2]==0?'':numList2[index][2]}}"
+			 style="background-color:{{(index==currentParaIndex&&currentParaId=='2')?'lightblue':''}};width:{{indexOfYuan==1?'20vw':indexOfYuan==2?'15vw':'12vw'}}"
+			 placeholder="{{item[2]}}"
+			/>
+			<text space="ensp">{{indexOfYuan==1?'':indexOfYuan==2?'Z=':'Z+'}}</text>
+			<input
+			 wx:if="{{indexOfYuan>=2}}"
+			 data-index="{{index}}"
+			 id="3"
+			 bindfocus="choosePara"
+			 bindblur="changeColor"
+			 bindinput="inputPara2"
+			 value="{{numList2[index][3]==0?'':numList2[index][3]}}"
+			 style="background-color:{{(index==currentParaIndex&&currentParaId=='3')?'lightblue':''}};width:{{indexOfYuan==1?'20vw':indexOfYuan==2?'15vw':'12vw'}}"
+			 placeholder="{{item[3]}}"
+			/>
+			<text space="ensp">{{indexOfYuan==3?'K=':''}}</text>
+			<input
+			 wx:if="{{indexOfYuan==3}}"
+			 data-index="{{index}}"
+			 id="4"
+			 bindfocus="choosePara"
+			 bindblur="changeColor"
+			 bindinput="inputPara2"
+			 value="{{numList2[index][4]==0?'':numList2[index][4]}}"
+			 style="background-color:{{(index==currentParaIndex&&currentParaId=='4')?'lightblue':''}};width:{{indexOfYuan==1?'20vw':indexOfYuan==2?'15vw':'12vw'}}"
+			 placeholder="{{item[4]}}"
+			/>
+		</view>
+	</view>
+</block>
+<view class="input-box" wx:if="{{indexOfYuan!=0}}">
+	<input
+	 placeholder="请输入文字"
+	 bindinput="inputText"
+	 bindfocus="bindfocus"
+	 bindblur="changeColor"
+	 value="{{paraValue}}"
+	/>
+</view>
+<button type="primary" style="width:80vw" bindtap="solve">解</button>
+<button type="default" style="width:80vw" bindtap="clear">清除</button>
+<view class="result-box" wx:if="{{result!=''}}">
+	<text>{{result}}</text>
+	<!-- <view>{{result_fraction}}</view> -->
+</view>
+<view class="process-box">
+	<text class="title" wx:if="{{process!=''}}">解题过程</text>
+	<text class="content" decode="true" space="ensp" selectable="true">{{process}}</text>
+</view>
+

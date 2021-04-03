@@ -1,0 +1,132 @@
+<!--index.wxml-->
+<image bindtap="help" class="about" src="{{calculator_questionMark}}" mode="aspectFit"></image>
+<image bindtap="isSound" class="sound" src="{{isSound?calculator_soundOpen:calculator_soundClose}}" mode="aspectFit"></image>
+<image bindtap="toHistory" wx:if="{{isShowHistory&&(isScientific?indexOfSpecialList==2:'true')}}" class="history" src="{{calculator_history}}" mode="aspectFit"></image>
+<scroll-view enable-flex scroll-top="{{scrollTop}}px" scroll-y class="screen1" style="height:{{isScientific?22:32}}vh ">
+	<view class="res" id="result" style="font-size:{{fontsize}}rpx;">{{res}}</view>
+</scroll-view>
+<view class="screen2" >
+	<text class="res2"wx:if="{{indexOfSpecialList==2}}">{{res_ed==''?'':'='+res_ed}}</text>
+</view>
+<view class="specialOperator-box {{isOpenSpecial?'open':'close'}}" style="height:{{isOpenSpecial?'18vh':''}}" wx:if="{{isScientific}}">
+	<view wx:for="{{specialOperatorList}}" wx:key="id">
+		<view class="specialOperator" bindtap="specialOp" id="{{index}}">{{item.name}}</view>
+	</view>
+</view>
+<view class="showSpecial">
+	<image wx:if="{{isScientific}}" bindtap="isOpenSpecial" class="question_control" mode="scaleToFill" src="{{!isOpenSpecial?calculator_arrow_up:calculator_arrow_down}}"></image>
+	<view wx:if="{{isScientific}}" bindtap='chooseContent'>{{specialOperatorList[indexOfSpecialList].content}}</view>
+</view>
+<view class="btngroup">
+	<view class="btnbox" wx:if="{{isScientific}}" style="height:{{isScientific?8:10}}vh">
+		<button id='{{id_sin}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">sin</button>
+		<button id='{{id_cos}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">cos</button>
+		<button id='{{id_tan}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">tan</button>
+		<button wx:if="{{indexOfSpecialList==2}}" id='{{id_X}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">X!</button>
+		<button class="brown" id='{{id_log}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">log</button>
+	</view>
+	<view class="btnbox" wx:if="{{isScientific}}" style="height:{{isScientific?8:10}}vh">
+		<button id='{{id_asin}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">asin</button>
+		<button id='{{id_acos}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">acos</button>
+		<button id='{{id_atan}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?(indexOfSpecialList!=2?80/3:20):25}}vw">atan</button>
+		<button wx:if="{{indexOfSpecialList==2}}" id='{{id_inverse}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">1/x</button>
+		<button class="brown" id='{{id_dou}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">,</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{indexOfSpecialList!=2?id_x:id_gen}}' bindtap="clickBtn" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">{{indexOfSpecialList!=2?'x':'√'}}</button>
+		<button class="c" id='{{id_love}}' style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw" data-time="{{lastTapTime}}" data-title="标题" bindtap="loveBtn" bindlongtap="longtap">♡</button>
+		<button class="c" id='{{id_d}}' bindtap="backBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">←</button>
+		<button class="c" id='{{id_c}}' bindtap="clearBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">C</button>
+		<button class="brown" id='{{id_pow}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">^</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{indexOfSpecialList!=2?id_y:id_mod}}' bindtap="clickBtn" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">{{indexOfSpecialList!=2?'y':'%'}}</button>
+		<button bindtap="startFraction" style="font-size:{{isScientific?40:60}}rpx;color:{{isFraction?'brown':'white'}};height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">a/b</button>
+		<button id='{{id_left}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">(</button>
+		<button id='{{id_right}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">)</button>
+		<button class="brown" id='{{indexOfSpecialList!=2?id_div_sp:id_div}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">{{indexOfSpecialList!=2?'/':'÷'}}</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{indexOfSpecialList!=2?id_z:id_deg}}' bindtap="clickBtn" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw" bindlongtap="{{indexOfSpecialList!=2?'':'toDeg'}}">{{indexOfSpecialList!=2?'z':'°'}}</button>
+		<button id='{{id7}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">7</button>
+		<button id='{{id8}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">8</button>
+		<button id='{{id9}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">9</button>
+		<button class="brown" id='{{indexOfSpecialList!=2?id_mult_sp:id_mult}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">{{indexOfSpecialList!=2?'*':'×'}}</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{id_i}}' bindtap="clickBtn" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">i</button>
+		<button id='{{id4}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">4</button>
+		<button id='{{id5}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">5</button>
+		<button id='{{id6}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">6</button>
+		<button class="brown" id='{{id_sub}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">－</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{id_pi}}' bindtap="clickBtn" bindlongtap="toScientificData" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">π</button>
+		<button id='{{id1}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">1</button>
+		<button id='{{id2}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">2</button>
+		<button id='{{id3}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">3</button>
+		<button class="brown" id='{{id_add}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">＋</button>
+	</view>
+	<view class="btnbox" style="height:{{isScientific?8:10}}vh">
+		<button id='{{id_e}}' bindtap="clickBtn" wx:if="{{isScientific}}" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">e</button>
+		<button id='{{id_dot}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">.</button>
+		<button id='{{id0}}' style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw" bindtap="clickBtn">0</button>
+		<button id='{{id_ans}}' bindtap="clickBtn" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">A</button>
+		<button class="brown" id='{{id_equal}}' bindtap="equal" style="font-size:{{isScientific?40:60}}rpx;height:{{isScientific?8:10}}vh;width:{{isScientific?20:25}}vw">＝</button>
+	</view>
+</view>
+<view class="float1 {{isRuleTrue?'isRuleShow':'isRuleHide'}}" bindtap='hideRule'>
+</view>
+<view class="{{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+	<scroll-view class='floatContent' scroll-y="true" enable-flex>
+		<view class="guide">
+			<text class="headline">计算器功能简介</text>
+			<text class="p">♡--------单击普通计算和科学计算切换</text>
+			<text class="p">π--------长按可选择科学常数</text>
+			<text class="p">a/b------分数和小数切换 如 4÷6=2/3</text>
+			<text class="p">A--------计算结果保存为A,如上次计算结果为2，则6+A=8</text>
+			<text class="p">i--------复数，如(1+6i)(2-3i)=20+9i</text>
+			<text class="p">°--------度 如sin(90°)=1，而sin(90)=0.894</text>
+			<text class="p">此计算器默认为弧度制,长按" ° "可将当前结果转为角度</text>
+			<text class="p">^--------幂  如 2^3=8</text>
+			<text class="p">X!-------阶乘  如 3！=6</text>
+			<text class="p">log------对数函数，通过逗号' , '可以求任意底的对数，如log(1000,10)=3,log(4,2)=2</text>
+			<text class="p">1/x------倒数</text>
+			<text class="p">√--------根号</text>
+			<text class="p">%--------模、mod，取余 如8%5=3</text>
+			<text class="p">e--------数学常数e</text>
+			<text class="p"> </text>
+
+			<text class="p">-----------点击阴影部分退出----------</text>
+			<text class="p"> 多项式化简实例1：</text>
+			<text class="code-dark">3 + 2 / 4 =  '7 / 2'
+2x + 3x = 5 * x
+x^2 + x + 3 + x^2 = 2*x^2+x+3
+x * y * -x / (x ^ 2) = -y</text>
+			<text class="p"> 多项式化简实例2：</text>
+			<text class="code-dark">2x/y - y/(x+1)
+=(2*x^2-y^2+2*x)/(x*y+y)
+
+(2x+1)^6
+=64*x^6+192*x^5+240*x^4
++160*x^3+60*x^2+12*x+1
+
+2x/((2x-1)/(3x+2))
+-5x/((3x+4)/(2x^2-5))+3=
+(-20*x^4+28*x^3+104*x^2+6*x-12)
+/(6*x^2+5*x-4)</text>
+			<text class="p"> 多项式求导实例：</text>
+			<text class="p"> 注：求导目前仅限于一个未知数</text>
+			<text class="code-dark">2x^2+3x+4 => 4*x + 3
+
+sin(2x) => 2*cos(2*x)
+
+x^2 + x => 2 * x + 1</text>
+<text class="p"> 注1：多项式化简支持展开幂多项式，幂次须小于5</text>
+<text class="p"> 注2：多项式化简支持分母有理化，可进行通分</text>
+<text class="p"> 注3：求导目前仅限于一个未知数</text>
+<text class="p"> 注4：历史记录功能暂不支持多项式化简和求导,历史记录条目向左滑动可逐个删除。</text>
+<text class="p"> 注5：本软件尚处于开发状态，存在许多未知错误，如果对本软件有任何意见或者建议，欢迎您在设置->机器人客服中与客服联系。如果客服无法及时回复，您可以在意见反馈中留言，无须填写联系方式，开发者收到反馈信息将会第一时间对您的反馈做出回应。</text>
+		</view>
+	</scroll-view>
+</view>

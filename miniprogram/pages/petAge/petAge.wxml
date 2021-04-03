@@ -1,0 +1,18 @@
+<!--miniprogram/pages/petAge/petAge.wxml-->
+<view class="page">
+	<view class="page__hd">
+	</view>
+	<view class="page__bd">
+		<view class="weui-grids">
+			<block wx:for="{{grids}}" wx:key="*this">
+				<view id="{{index}}" bindtap="navigateTo" class="weui-grid" hover-class="weui-grid_active">
+					<image class="weui-grid__icon" src="{{item.url}}" />
+					<view class="weui-grid__label">{{item.name}}</view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<view style="position:fixed;bottom:0vh;width:100vw;">
+		<ad unit-id="adunit-6e8caf5f8edcd70e" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
+	</view>
+</view>

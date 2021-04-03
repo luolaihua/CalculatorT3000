@@ -1,0 +1,14 @@
+<view class="container" >
+  <chatroom
+    style="width: 100%; height: 100%"
+    envId="{{chatRoomEnvId}}"
+    openId="{{openId}}"
+    chatPeopleNum="{{chatPeopleNum}}"
+    collection="{{chatRoomCollection}}"
+    groupId="{{chatRoomGroupId}}"
+    groupName="{{chatRoomGroupName}}"
+    userInfo="{{userInfo}}"
+    onGetUserInfo="{{onGetUserInfo}}"
+    getOpenID="{{getOpenID}}"
+  ></chatroom>
+</view>

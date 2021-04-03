@@ -1,0 +1,86 @@
+{
+  "pages": [
+    "pages/index/index",    
+  "pages/menu/menu",
+       "pages/imageEdit/imageEdit", 
+
+    "pages/iqGame/iqGameInfo/iqGameInfo",
+  
+    "pages/setting/setting",
+
+
+    "pages/boringTime/boringTime",
+    "pages/boringTime/boringTopList/boringTopList",
+    "pages/im/room/room",
+    "pages/solveFormula/solveFormula",
+    "pages/iqGame/iqGame",
+    "pages/myMatrices/myMatrices",
+    "pages/qrCode/qrCode",
+    "pages/counter/counter",
+    "pages/petAge/petAge",
+    "pages/petAge/ageCalculate/ageCalculate",
+    "pages/bigWheel/bigWheel",
+    "pages/bodyTest/bodyTest",
+    "pages/unitTransfer/unitTransfer",
+    "pages/relative/relative",
+
+    "pages/myRobot/myRobot",
+    "pages/iq/iq",
+    "pages/bigWheel/edit/edit",
+    "pages/bigWheel/chooseItem/chooseItem",
+    "pages/bigWheel/bigWheelSetting/bigWheelSetting",
+    "pages/resistance/resistance",
+    "pages/aboutResistance/aboutResistance",
+    "pages/nameMade/nameMade",
+    "pages/beijinghua/beijinghua",
+    "pages/bmi/bmi",
+    "pages/im/im",
+    "pages/deployFunctions/deployFunctions",
+    "pages/addFunction/addFunction",
+    "pages/databaseGuide/databaseGuide",
+    "pages/storageConsole/storageConsole",
+    "pages/userConsole/userConsole",
+    "pages/aboutMatrix/aboutMatrix",
+    "pages/scientificData/scientificData",
+    "pages/welcome/welcome",
+    "pages/introduction/introduction",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#fff",
+    "backgroundColor": "#000",
+    "selectedColor": "#A52A2A",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "images/cacu_white.png",
+        "selectedIconPath": "images/cacu_red.png"
+      },
+      {
+        "pagePath": "pages/myMatrices/myMatrices",
+        "text": "",
+        "iconPath": "images/juzhen_white.png",
+        "selectedIconPath": "images/juzhen_blue.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "",
+        "iconPath": "images/menu_white.png",
+        "selectedIconPath": "images/menu_orange.png"
+      }
+    ]
+  }
+}

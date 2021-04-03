@@ -1,0 +1,132 @@
+/* pages/welcome/welcome.wxss */
+page {
+  background-color: black;
+}
+
+/*
+.wx-switch-input{
+width:82rpx !important;
+height:40rpx !important;
+}
+白色样式（false的样式）
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 36rpx !important;
+  }
+  绿色样式（true的样式）
+  .wx-switch-input::after{
+  width: 40rpx !important;
+  height: 36rpx !important;
+  }
+
+*/
+.about{
+  height: 5vh;
+  width: 5vh;
+  margin-right: 20rpx;
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+}
+
+.inputBox{
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.input {
+  background-color: black;
+  color: white;
+  font-size: 50rpx;
+  width: auto;
+  height: 100rpx;
+  margin: 10rpx;
+
+}
+.ok{
+  width: 20rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  background-color: white;
+  font-size: 40rpx;
+}
+
+.show{
+  word-wrap: break-word;
+  height: 200rpx;
+  background-color: black;
+  color: orange;
+  font-size: 60rpx;
+  text-align: center;
+  width: auto;
+  margin: 40rpx;
+  
+}
+
+.text {
+
+  word-wrap: break-word;
+  background-color: black;
+  color: white;
+  font-size: 40rpx;
+  width: auto;
+  height: 20vh;
+  margin-left: 50rpx;
+  margin-top: 2vh;
+
+}
+
+.result {
+  height: 10vh;
+  background-color: transparent;
+  color:orange;
+  font-size: 70rpx;
+  text-align: right;
+  width: auto;
+  margin-left: 20rpx
+}
+
+.btnBox {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  border: none;
+}
+
+.btngroup {
+
+  width: 100%;
+}
+
+.btn {
+  background-color: white;
+  margin: 0rpx;
+  border-radius: 0px;
+  text-align: center;
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange1 {
+  color: orange;
+}
+
+.gray {
+  background-color: #cfcfcf;
+}
+
+.shadow {
+  background-color: #999;
+}

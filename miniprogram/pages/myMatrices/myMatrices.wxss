@@ -1,0 +1,167 @@
+/* miniprogram/pages/myMatrices/myMatrices.wxss */
+@import "../../style/guide.wxss";
+
+swiper{
+  display: flex;
+  height:45vh;
+  width:100vw;
+}
+.guide .counter {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+.p1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page{
+
+  background-color: white;
+}
+.body{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+}
+.AB,.picker-show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+}
+.picker-show{
+  width: 8vw;
+  font-size: 30rpx;
+}
+.picker{
+  height: 20vh;
+  width: 8vw;
+}
+
+.picker-section{
+  display: flex;
+  flex-direction: column;
+}
+.input-section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.input-box{
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input{
+  
+  height: 6vh;
+  text-align: center;
+  border-style: solid;
+  border-color: lightskyblue;
+  border-radius: 3%;
+  border-width: 2rpx;
+  margin:0.5vh 0.5vw;
+}
+
+
+.show-section{
+  border-style: solid;
+  border-color: lightskyblue;
+  border-radius: 2%;
+  border-width: 2rpx;
+  font-size: 40rpx;
+  height: 30vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.show-body{
+  height: 34vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.op-section{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: gainsboro 1px solid;
+}
+.op-box{
+  height: 20vh;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.opView {
+  border-radius: 2%;
+  width: auto;
+  font-size: 30rpx;
+  font-weight: bolder;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.shadow {
+  background-color: lightsteelblue;
+  font-weight: 800;
+}
+
+.isShow {
+  display: block;
+}
+ 
+.isHide {
+  display: none;
+}
+ 
+.float1 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0,0.5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+ 
+.floatContent {
+  z-index: 3;
+  width: 80%;
+  height: 900rpx;
+  background: #fff;
+  margin-top: 10%;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5rpx;
+  left: 10%;
+}
+text{
+  margin-left: 20rpx;
+}

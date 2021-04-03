@@ -1,0 +1,13 @@
+<!--miniprogram/pages/boringTime/boringTime.wxml-->
+<image bindtap="toTopList" class="infoIcon" 
+src="{{userInfoImgUrl}}" mode="aspectFit"></image>
+
+<view class="body" bindtap="bindtap" bindtouchstart="bindtouchstart" bindtouchend="bindtouchend">
+	<view class="showFace">
+  <block wx:for="{{imgUrl}}" wx:key="index">
+		<image src="{{item}}" mode="aspectFit" animation="{{index%2==0?animation:index%3==0?animation2:animation3}}"></image>
+</block>
+	</view>
+	<text animation="{{animation}}" class="show">{{boringTime}} </text>
+</view>
+<text class="max" wx:if="{{boringTimeMax!=0}}" bindtap="showMax">{{boringTimeMax}}</text>

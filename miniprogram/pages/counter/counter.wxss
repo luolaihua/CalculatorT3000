@@ -1,0 +1,59 @@
+/* miniprogram/pages/counter/counter.wxss */
+.opBtn,.content,.setting-box,.setting-box1{
+
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  width: 100vw;
+  height: 65vh;
+  font-size: 250rpx;
+  word-break: break-all;
+
+}
+.opBtn-hover2{
+
+background-color: lightblue;
+}
+.opBtn-hover1{
+
+  background-color: lightpink;
+  }
+
+.opImg{
+  width: 30vw;
+  height: 30vw;
+}
+.btn-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.setting-box{
+  width: 100vw;
+  height: 10vh;
+}
+.setting-box1{
+  width: 0vw;
+  height: 10vh;
+  transition: width 1s;
+  transition-timing-function: ease-in-out;
+}
+.setting{
+  width: 6vh;
+  height: 6vh;
+  margin-left: 5vw;
+}
+.left{
+  width: 100vw;
+}
+.right{
+  width: 0vw;
+}
+.noVibrate{
+  opacity: 0.2;
+}
+

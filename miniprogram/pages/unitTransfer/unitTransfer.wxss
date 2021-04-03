@@ -1,0 +1,107 @@
+/* miniprogram/pages/unitTransfer/unitTransfer.wxss */
+.body {
+  height: 100%;
+}
+
+.viewGroup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.viewBox {
+  height: 10vh;
+  display: flex;
+}
+
+.v1 {
+
+  font-size: 40rpx;
+  width: 200rpx;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16vh;
+  margin-top: 20rpx;
+}
+
+.select {
+  margin-left: 20rpx;
+  font-size: 50rpx;
+  width: 300rpx;
+  color: orangered;
+}
+.jinzhi-select {
+  margin-left: 20rpx;
+  font-size: 50rpx;
+  width: 150rpx;
+  color: orangered;
+}
+
+.show {
+  word-break: break-all;
+  font-size: 60rpx;
+  width: 600rpx;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.showUnit {
+  text-align: right;
+  margin: 20rpx;
+  color: gray;
+}
+
+
+
+.input-section {
+  height: 46vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.inputBox {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.v2 {
+  font-size: 60rpx;
+  height: 400rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.op {
+  color: orange;
+  font-size: 60rpx;
+  height: 400rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jinzhi-section{
+  margin-right: 20rpx;
+}
+
+.shadow1 {
+  font-size: 60rpx;
+}
+
+.shadow2 {
+  font-weight: 800;
+  color: orangered;
+}

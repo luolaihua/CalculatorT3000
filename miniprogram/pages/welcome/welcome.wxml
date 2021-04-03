@@ -1,0 +1,8 @@
+<!--miniprogram/pages/welcome/welcome.wxml-->
+<view class="image">
+<image src="../../images/t1.jpg" mode="aspectFit"></image>
+</view>
+
+<button class="btn" style="primary" bindtap="bindtap">老婆我爱你({{time}})</button>
+
+

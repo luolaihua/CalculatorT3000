@@ -1,0 +1,236 @@
+@import "../../style/guide.wxss";
+
+.guide .counter {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.guide {
+  height: 80vh;
+}
+
+.btnbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+
+}
+
+.test {
+  position: fixed;
+  bottom: 0;
+}
+
+.btngroup {
+  background-color: black;
+
+  width: 100vw;
+}
+
+button {
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+button::after {
+  border-radius: 0;
+  border: none;
+}
+
+.brown {
+  border-radius: 0;
+  background-color: brown;
+}
+
+.c {
+  color: brown;
+}
+
+.screen1,.screen2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1vh;
+}
+.res {
+  height: 100%;
+  line-height: 1;
+  word-wrap: break-word;
+  text-align: right;
+  margin-left: 60rpx;
+  margin-right: 20rpx;
+}
+.screen2 {
+  height: 7vh;
+  width: 100vw;
+  padding-bottom: 0;
+  background-color: transparent;
+}
+.res2 {
+  height: 100%;
+  word-wrap: break-word;
+  text-align: right;
+  margin-left: 45rpx;
+  margin-right: 20rpx;
+  font-size: 55rpx;
+  color: darkgrey;
+}
+
+.specialOperator-box {
+  position: fixed;
+  bottom: 68vh;
+  left: 50rpx;
+  z-index: 3;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  overflow: hidden;
+  height: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 20vh;
+  }
+}
+
+@keyframes slideup {
+  from {
+    height: 20vh;
+   
+  }
+
+  to {
+    height: 0;
+
+  }
+}
+
+.open {
+  animation: slidedown 0.6s;
+
+}
+
+.close {
+ display: none;
+  animation: slideup 0.6s;
+}
+
+.specialOperator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  border-style: solid;
+  border-radius: 3%;
+  border-width: thin;
+  margin-bottom: 1vh;
+}
+
+.showSpecial,
+.devirative-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.devirative {
+
+  border-right: solid 1px gray;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 60rpx;
+}
+
+.question_control {
+  width: 4vh;
+  height: 4vh;
+  margin: 1vh;
+}
+
+.about {
+  height: 50rpx;
+  width: 50rpx;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 2px;
+  opacity: 0.5;
+}
+
+.sound {
+  height: 50rpx;
+  width: 50rpx;
+  position: fixed;
+  z-index: 2;
+  top: 50rpx;
+  left: 2px;
+  opacity: 0.5;
+}
+
+.history {
+  height: 50rpx;
+  width: 50rpx;
+  position: fixed;
+  z-index: 2;
+  top: 100rpx;
+  left: 2px;
+  opacity: 0.5;
+}
+
+
+.isRuleShow {
+  display: block;
+}
+
+.isRuleHide {
+  display: none;
+}
+
+.float1 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+
+.floatContent {
+  z-index: 3;
+  padding: 10rpx 0;
+  width: 80%;
+  height: 80vh;
+  background: #fff;
+  margin: 10% auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 10vw;
+}
+
+text {
+  margin-left: 20rpx;
+}

@@ -1,0 +1,175 @@
+/* miniprogram/pages/solveFormula/solveFormula.wxss */
+page {
+  background-color: white;
+}
+
+.picker {
+  background-color: white;
+  height: 150rpx;
+  width: 200rpx;
+}
+
+.indicator {
+  height: 100rpx;
+}
+
+.pickerContent {
+  font-weight: bolder;
+  font-size: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker-section,
+.showFormula {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.formula-box {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulaContent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 45rpx;
+}
+
+.formulaContent2 input {
+  text-align: center;
+  width: 12vw;
+  height: 8vh;
+  color: orangered;
+  margin: 0 4px;
+}
+
+.formulaContent2 text {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+
+.input-box {
+  width: 100vw;
+  height: 8vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: darkgrey solid 1px;
+  border-top: darkgrey solid 1px;
+}
+
+.input-box input {
+  height: 6vh;
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.showFormula {
+  font-weight: bolder;
+  width: 100%;
+  height: 150rpx;
+  font-size: 50rpx;
+  border-top: 1px solid gainsboro;
+}
+
+.para-box {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3vh;
+  border-bottom: 1px solid gainsboro;
+}
+
+.paraInput-box,
+.result-box {
+  height: 100rpx;
+  width: 100%;
+  font-size: 50rpx;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.borderTop {
+  border-top: 1px solid gainsboro;
+}
+
+.paraText {
+  width: 20vw;
+}
+
+.paraInput {
+
+  height: 70rpx;
+  width: 60vw;
+}
+
+.result-box {
+
+  height: 250rpx;
+  margin-top: 3vh;
+  border-bottom: 1px solid gainsboro;
+  border-top: 1px solid gainsboro;
+
+}
+
+.result-box text {
+
+  line-height: 1.2;
+  font-size: 45rpx;
+  width: 100%;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rpx;
+}
+
+.paraDelete {
+  margin-left: 2vw;
+  height: 30rpx;
+  width: 30rpx;
+  opacity: 1;
+}
+
+.process-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 40rpx;
+  margin-top: 1vh;
+}
+
+.content {
+  word-wrap: break-word;
+  width: 90vw;
+  font-size: 35rpx;
+  margin-top: 1vh;
+}

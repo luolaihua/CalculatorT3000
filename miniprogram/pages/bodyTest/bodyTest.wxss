@@ -1,0 +1,79 @@
+/* miniprogram/pages/bodyTest/bodyTest.wxss */
+@import "../../style/weui.wxss";
+.input-container {
+  padding: 0 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ border-bottom: 1px solid #e2e2e2;
+ height:4vh;
+ line-height: 60rpx;
+ font-size:32rpx;
+ padding: 16rpx 0rpx;
+ color: #909090;
+}
+
+.item .label{
+ width: 25%;
+ float: left;
+ vertical-align: middle;
+}
+
+.item input{
+  height:4vh;
+  width: 80%;
+ margin-right: 5%;
+ text-align: right;
+ padding-right: 8rpx;
+ color:skyblue;
+}
+
+.item .unit{
+ float: right;
+}
+
+.item .type_select{
+ float: right;
+}
+
+.item .type_select text{
+ margin-left: 8rpx;
+}
+
+.no-border{
+display: block;
+ border-bottom: 0px;
+}
+
+.calcu_btn {
+ background-color:skyblue;
+ color: #fff;
+ font-weight: 400;
+ width: 80vw;
+ margin-top: 30rpx;
+}
+
+.circle_hide{  
+ display: none;  
+}  
+.circle_show{  
+ display: block;  
+}  
+
+.BMIcanvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.weui-footer{
+  margin-top: 150rpx;
+}
+.weui-form__extra-area{
+  margin-bottom: 0;
+}
