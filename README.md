@@ -2,8 +2,7 @@
 微信小程序：超级计算器T3000
 
 小程序码：
-![](https://github.com/luolaihua/CalculatorT3000/blob/main/gh_d97374b7d788_258.jpg)
-
+![](https://github.com/luolaihua/CalculatorT3000//tree/main/introduction/gh_d97374b7d788_258.jpg)
 科学计算；
 
 分数、复数、矩阵计算；
