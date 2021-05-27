@@ -12,22 +12,18 @@
 8. 数学闯关；
 9. 宠物年龄计算；
 10. 解方程
+
+
 其中，科学计算和矩阵计算功能为本程序的核心技术，使用到了一个数学计算库：https://mathjs.org
+
 本程序的大部分计算功能都依赖于这个功能库。
+
 开发历时三月，由于此项目此前一直都是由微信小程序方提供的的代码管理服务，现转到github，开发历程详见另一个仓库：https://github.com/luolaihua/super-calculator
 
 小程序码：
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/wechatcode.jpg)
-1. 科学计算；
-2. 分数、复数、矩阵计算；
-3. 亲戚关系计算；
-4. 单位转换；
-5. 体测成绩计算；
-6. BMI计算；
-7. 大转盘；
-8. 数学闯关；
-9. 宠物年龄计算；
-10. 解方程
+
+相关功能截图：
 
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/calc_1.jpg)
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/calc_2.jpg)
