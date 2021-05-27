@@ -18,7 +18,9 @@
 
 本程序的大部分计算功能都依赖于这个功能库。
 
-开发历时三月，由于此项目此前一直都是由微信小程序方提供的的代码管理服务，现转到github，开发历程详见另一个仓库：https://github.com/luolaihua/super-calculator
+开发历时三月(2020.2-2020.5)，由于此项目此前一直都是由微信小程序方提供的的代码管理服务，现转到github，开发历程详见另一个仓库：https://github.com/luolaihua/super-calculator
+
+![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/test.png)
 
 小程序码：
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/wechatcode.jpg)
