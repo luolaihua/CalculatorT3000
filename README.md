@@ -13,6 +13,8 @@
 9. 宠物年龄计算；
 10. 解方程
 
+![](https://img-blog.csdnimg.cn/2020051021484080.jpg)
+
 
 其中，科学计算和矩阵计算功能为本程序的核心技术，使用到了一个数学计算库：https://mathjs.org
 
@@ -23,9 +25,21 @@
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/test.png)
 
 小程序码：
+![](https://img-blog.csdnimg.cn/2020051021484080.jpg)
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/wechatcode.jpg)
 
 相关功能截图：
+![](https://img-blog.csdnimg.cn/direct/808305d0881a41abb88f8d3c2d9a9eb7.gif)
+![](https://img-blog.csdnimg.cn/direct/4cdbfaf5ee79416f86fe87087612b72d.gif)
+![](https://img-blog.csdnimg.cn/direct/d5b3b53cf1584cc989d9f18c695602f8.gif)
+![](https://img-blog.csdnimg.cn/direct/ce8583c19c1e4f2f85b3be2005c56055.gif)
+![](https://img-blog.csdnimg.cn/direct/d1709079db1b4dd2a704e0a31ed93da8.gif)
+![](https://img-blog.csdnimg.cn/direct/a70a5b95eae24c83b291b2b21ce074c9.gif)
+![](https://img-blog.csdnimg.cn/direct/d37c765405974dfc90e94723249583cc.gif)
+![](https://img-blog.csdnimg.cn/direct/babd2405f03a44ac989d0ebdbd8fe276.gif)
+![](https://img-blog.csdnimg.cn/direct/c675102d64fa4076879e5d363970a49e.gif)
+![](https://img-blog.csdnimg.cn/direct/27c2b1838c2d46df8de33f68ea25d1a5.gif)
+![](https://img-blog.csdnimg.cn/direct/8e49d358c92f445f8e182aeb26de64ec.gif)
 
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/calc_1.jpg)
 ![](https://github.com/luolaihua/CalculatorT3000/blob/main/introduction/calc_2.jpg)
